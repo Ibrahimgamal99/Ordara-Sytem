@@ -1,0 +1,229 @@
+<html<head>
+    <meta charset="utf-8" />
+    <title>Ordara System</title>
+    </head>
+
+    <body>
+        <h1>API</h1>
+        <p>
+        <p>create new user (post)</p>
+        <p> https://orderasystem.herokuapp.com/register/signupuser</p>
+        {
+        "type": "user",
+        "first_name": "hema",
+        "last_name": "ibrahim gamal",
+        "password": "hema123",
+        "email": "hema@gmail.com",
+        "location":"banha-cairo"
+        }
+        <p>*****************************</p>
+        <p>create new delvary (post)</p>
+        <p> https://orderasystem.herokuapp.com/register/signupdelvary</p>
+        {
+        "type": "Delvary",
+        "first_name": "islam",
+        "last_name": "islam",
+        "password": "islam123",
+        "email": "islam@gmail.com"
+        "Scooter":"345-se"
+        }
+        <p>*****************************</p>
+        <p>Login</p>
+        <p>https://orderasystem.herokuapp.com/login</p>
+        <p>{
+            "type": 1,
+            "email": "hema@gmail.com",
+            "password": "ahmed"
+            } مستخدم
+        </p>
+        {
+        "type": 2,
+        "email": "islam@gmail.com",
+        "password": "islam123"
+        } Delvary
+        <p>{
+            "type": 3,
+            "email": "Ordara@gmail.com",
+            "password": "ordara123"
+            } مسئول
+        </p>
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/delvary/restaurants</p>
+        {
+        "name": "MAC"
+        }
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/delvary/foods</p>
+        {
+        "id":"1" }
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/delvary/supermarket</p>
+        {
+        "name":"islam market"
+        }
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/delvary/groceries</p>
+        {
+        "id":"1"
+        }
+        <p>*****************************</p>
+
+        <p> https://orderasystem.herokuapp.com/delvary/library</p>
+        {
+        "name":"we"
+        }
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/delvary/tools</p>
+        {
+        "id":"1" }
+        <p>*****************************</p>
+        <p>getting all delevery in waiting list (GET) </p>
+        <p> https://orderasystem.herokuapp.com/admin/waitlist</p>
+        <p>*****************************</p>
+        <p> https://orderasystem.herokuapp.com/admin/approve</p>
+        {
+        "approve":1,
+        "id":
+        } 0 for rejected 1 for approve
+        <p>*****************************</p>
+        <p>add to cart</p>
+        <p> https://orderasystem.herokuapp.com/cart/addcart</p>
+        {
+        "user_id":"1",
+        "product_name":"chiken hat",
+        "place":"MAC",
+        "image":"https://i.ibb.co/4fMtYyf/Balad-El-Gharieb.jpg",
+        "qty":"1",
+        "price":"100",
+        "user_location":"AlMotamayez District, 6th of october, Egypt",
+        "prudect_location":"AlMotamayez District, 6th of october, Egypt"
+        }
+        <p>*****************************</p>
+        <p>get home page (GET)</p>
+        <p> https://orderasystem.herokuapp.com/home/quick</p>
+        <p>*****************************</p>
+        <p>get location (post)</p>
+        <p> https://orderasystem.herokuapp.com/home/quick_detail</p>
+        { "id":3
+        }
+        <p>*****************************</p>
+        <p>get delary list (get)</p>
+        <p> https://orderasystem.herokuapp.com/admin/delvarylist</p>
+        <p>*****************************</p>
+        <p>delete delary (post)</p>
+        <p> https://orderasystem.herokuapp.com/admin/delete_delvary</p>
+        { "id":3
+        }
+        <p>*****************************</p>
+        <p>list carts (post)</p>
+        <p> https://orderasystem.herokuapp.com/cart/listcarts</p>
+        { "id":5
+        }
+        <p>*****************************</p>
+        <p>categroy (post)</p>
+        <p> https://orderasystem.herokuapp.com/home/categroy</p>
+        {
+        "id_items": 1,
+        "id": 5,
+        "categroy": "foods"
+        } "foods","groceries","tools"
+        <p>*****************************</p>
+        <p>status (put)</p>
+        <p> https://orderasystem.herokuapp.com/user/status</p>
+        {
+        "delvary_id":1,
+        "status":1,
+        "type":1,
+        "location":"gsdgs"
+        }
+        <p>*****************************</p>
+        <p>transportation (get distance between captains)</p>
+        <p> https://orderasystem.herokuapp.com/user/transportation</p>
+        {
+        "user_location":"Amin Yousry, Al Khosous, El Marg, Cairo Governorate"
+        }
+        <p>*****************************</p>
+        <p>go location </p>
+        <p> https://orderasystem.herokuapp.com/user/go_location</p>
+        {
+        "delvary_id": 2,
+        "user_location": "Amin Yousry, Al Khosous, El Marg, Cairo Governorate",
+        "end_location": "Abou Bakr El-Sedeek, Al Khosous, El Marg, Cairo Governorate",
+        "lat_s": "4563463",
+        "long_s": "63463",
+        "lat_e": "4634",
+        "long_e": "4634"
+        }
+        <p>*****************************</p>
+        <p>caption transportation </p>
+        <p> https://orderasystem.herokuapp.com/delvary/transportation</p>
+        {
+        "delvary_id":2
+        }
+        <p>*****************************</p>
+        <p>approve captain transportation </p>
+        <p> https://orderasystem.herokuapp.com/delvary/approve</p>
+        {
+        "delvary_id":7,
+        "type":"transportation"
+        }transportation, delivery
+        <p>*****************************</p>
+        <p>delete carts prudect </p>
+        <p> https://orderasystem.herokuapp.com/cart/delete_carts</p>
+        {
+        "user_id": "1",
+        "item_id": 2
+        }
+        <p>*****************************</p>
+        <p>rateing a captain </p>
+        <p> https://orderasystem.herokuapp.com/user/rate</p>
+        {
+        "delvary_id": 2,
+        "rate": 5
+        }
+        <p>*****************************</p>
+        <p>delivery </p>
+        <p> https://orderasystem.herokuapp.com/user/delivery</p>
+        {
+        "user_id":1
+        }
+        <p>*****************************</p>
+        <p>plase location </p>
+        <p> https://orderasystem.herokuapp.com/home/place</p>
+        {
+        "id":1,
+        "categroy":"tools"
+        }
+        <p>caption delivery </p>
+        <p> https://orderasystem.herokuapp.com/delvary/delivery</p>
+        {
+        "delvary_id":3
+        }
+        <p>*****************************</p>
+        <p>update delivery </p>
+        <p> https://orderasystem.herokuapp.com/update/delivery</p>
+        {
+        "delivery_id":2,
+        "first_name": "ibrahim",
+        "last_name": "gamal",
+        "email": "hemaaa@gmail.com",
+        "Scooter":"464d"
+        }
+        <p>*****************************</p>
+        <p>update user </p>
+        <p> https://orderasystem.herokuapp.com/update/user</p>
+        {
+        "user_id":1,
+        "first_name": "ibrahim",
+        "last_name": "gamal",
+        "email": "hema@gmail.com",
+        "location":"52-4 El-Salam, Al Khosous, Al Khankah, Al Qalyubia Governorate"
+        }
+        <p>*************************</p>
+        <p>delete carts after approve (delete)</p>
+        <p> https://orderasystem.herokuapp.com/cart/approve/1</p>
+        <p>*************************++++</p>
+
+    </body>
+
+    </html>
